@@ -1,112 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
 
-
 /* General body and page design */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ffbf00, #ffdd55); /* Gradient background */
+    font-family: 'Roboto', sans-serif; /* Modern font for the body */
+    background: linear-gradient(135deg, #ece3c5, #ffdd55); /* Gradient background */
     color: #000; /* Black text color */
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure everything uses consistent sizing */
 }
 
 /* Main container styling */
 .homepage-container {
     display: flex;
-    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
+    flex-wrap: wrap; /* Ensure it wraps content on small screens */
     padding: 20px;
-    gap: 20px;
-    justify-content: space-between; /* Spaces out children */
+    gap: 20px; /* Add space between flex children */
+    justify-content: space-around; /* Evenly distribute children */
     align-items: flex-start; /* Align items to the top */
-    width: 100%;
-    box-sizing: border-box; /* Consistent sizing */
+    width: 100%; /* Full width container */
+    box-sizing: border-box;
 }
 
 /* Welcome Section */
 .welcome-section {
-    width: 100%; /* Full width */
-    background: linear-gradient(135deg, #ffbf00, #ffd700); /* Gradient background */
-    color: #fff; /* White text for contrast */
-    text-align: center; /* Center the text */
-    padding: 40px 20px; /* Spacing inside the section */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border-radius: 8px; /* Slight rounded edges */
-    margin-bottom: 30px; /* Space below the section */
+    width: 100%; /* Full width for all devices */
+    background: linear-gradient(135deg, #ecd796, #ffd700);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 30px;
 }
 
 .welcome-section h1 {
-    font-size: 2.5rem; /* Large bold title */
+    font-size: 2rem;
     margin-bottom: 15px;
-    text-transform: uppercase; /* Uppercase for modernized look */
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff8a00, #da5c8a); /* Gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .welcome-section p {
-    font-size: 1.2rem; /* Slightly larger paragraph text */
-    line-height: 1.6; /* Readable line spacing */
-    margin: 0 auto; /* Center paragraph for smaller screens */
-    max-width: 800px; /* Limit paragraph width */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 700px;
+    color: #444; /* Neutral gray for a modern look */
 }
+
 
 /* Map Section */
 .map-container {
-    flex: 1 1 50%; /* Take 50% of the width */
-    max-width: 50%; /* Restrict map to 50% of screen */
-    background: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Modern shadow */
+    flex: 1 1 48%; /* Take upto 48% width for desktops */
+    max-width: 47%; /* Prevent going beyond 48% for larger widths */
+    background: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .map-container:hover {
-    transform: scale(1.02); /* Slight zoom effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow effect */
+    transform: scale(1.02); /* Hover zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow pop on hover */
 }
 
 .map-container h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
     margin-bottom: 15px;
+    color: #333; /* Darker heading color */
     font-weight: bold;
-    text-transform: uppercase; /* Make title uppercase */
-    color: #333; /* Slightly darker text for contrast */
 }
 
 #map {
-    width: 100%;
-    height: 400px; /* Fixed map height */
+    width: 100%; /* Full width map */
+    height: 300px; /* Smaller fixed height for mobile */
     border-radius: 12px;
 }
 
 /* Item Details Section */
 .item-details {
-    flex: 1 1 50%; /* Fixed width of 50% of the page */
-    max-width: 50%;
-    background: rgba(255, 255, 255, 0.7); /* Glassmorphism effect */
-    backdrop-filter: blur(10px);
+    flex: 1 1 48%; /* Occupy half screen on desktop */
+    max-width: 48%;
+    background: rgba(255, 255, 255, 0.95); /* Slightly opaque background */
+    backdrop-filter: blur(10px); /* Glass effect */
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    text-align: left;
-    color: #000; /* Black text */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item-details:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4); /* Elevated hover effect */
+    transform: scale(1.02); /* Hover enlarge effect */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4); /* Enhanced hover shadow */
 }
 
 .item-details h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Adjusted size for smaller screens */
     margin-bottom: 15px;
     color: #333;
-    font-weight: bold;
 }
 
 .item-label {
-    margin-bottom: 20px;
-    font-size: 1rem;
+    margin-bottom: 30px;
 }
 
 .item-label label {
@@ -116,63 +117,48 @@ body {
 }
 
 .item-label img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 8px;
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain proportions */
+    border-radius: 8px; /* Rounded corners */
 }
 
 /* Button styling */
 .fetch-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 10px 20px; /* Reduced padding for mobile */
+    font-size: 0.9rem; /* Slightly smaller font size */
     background: linear-gradient(90deg, #ffd700, #ffc107); /* Gradient button */
-    color: #000; /* Black text */
+    color: #000;
     border: none;
-    border-radius: 50px; /* "Pill" shape */
+    border-radius: 50px; /* Pill-shaped */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fetch-button:hover {
-    background: linear-gradient(90deg, #ffc107, #ffbf00); /* Inverted gradient */
-    transform: translateY(-5px) scale(1.05); /* Elevate and scale */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add shadow */
+    background: linear-gradient(90deg, #ffc107, #ffbf00); /* Reverse gradient */
+    transform: translateY(-3px); /* Subtle hover animation */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Highlight on hover */
 }
 
 .fetch-button:active {
-    transform: translateY(2px); /* Pressed effect */
+    transform: translateY(2px); /* Button pressed effect */
 }
 
-/* Reform Form Container - creating the form view */
+/* Form Container */
 .form-container {
-    flex: 0 0 50%; /* Occupying the center of the screen */
-    max-width: 45%; /* Limit to 50% width */
-    margin: 0% ; /* Center horizontally */
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
+    flex: 1 1 47%; /* Occupies less space by default */
+    max-width: 47%; /* Limit size for larger screens */
+    margin: 0 auto; /* Center it horizontally */
+    background: rgba(255, 255, 255, 0.95); /* Transparent white effect */
+    backdrop-filter: blur(10px); /* Add blur effect */
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     padding: 20px;
-    color: #000;
     text-align: left;
+    color: #000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-container h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-container label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
 }
 
 .form-container input,
@@ -180,56 +166,48 @@ body {
 .form-container select,
 .form-container button {
     width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
+    padding: 20px;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-sizing: border-box;
 }
 
-/* Button inside form */
-.form-container button {
-    background: #ffbf00;
-    color: #000;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.form-container button:hover {
-    background-color: #ffc107;
-    transform: translateY(-2px);
-}
-
-.form-container button:active {
-    transform: translateY(2px);
-}
-
-/* Utility classes */
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
 /* Responsive Design */
+
+/* Adjust for tablets */
 @media screen and (max-width: 1024px) {
     .map-container,
-    .item-details {
-        flex: 1 1 48%; /* Adjust for slightly smaller screens */
+    .item-details,
+    .form-container {
+        flex: 1 1 48%; /* Take nearly half the width */
         max-width: 48%;
     }
 }
 
+/* Adjust for mobile devices */
 @media screen and (max-width: 768px) {
     .map-container,
     .item-details,
     .form-container {
-        flex: 1 1 100%; /* Full width in stack layout */
-        max-width: 100%;
+        flex: 1 1 100%; /* Full width for stack layout */
+        max-width: 100%; /* Restrict to full width */
+    }
+
+    .welcome-section h1 {
+        font-size: 1.8rem; /* Smaller heading for smaller devices */
+    }
+
+    .welcome-section p {
+        font-size: 0.9rem; /* Reduced font size for readability */
+    }
+
+    #map {
+        height: 250px; /* Reduced height for smaller devices */
+    }
+
+    .fetch-button {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 8px 16px; /* Reduced padding for buttons */
     }
 }
